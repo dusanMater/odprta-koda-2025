@@ -1,0 +1,2 @@
+1. Pri 2. nalogi sem pozabil uporabiti .toDouble(), zato nisem mogel pravilno preračunati popusta.
+2. Pri 3. nalogi sem zamenjal vrstni red v if stavku in program ni deloval pravilno.
