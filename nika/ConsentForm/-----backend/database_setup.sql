@@ -1,0 +1,16 @@
+-- create db
+CREATE DATABASE IF NOT EXISTS consent_forms_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE consent_forms_db;
+
+CREATE TABLE consent_forms (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    birthday DATE NOT NULL,
+    has_agreed BOOLEAN NOT NULL DEFAULT FALSE,
+    signature LONGTEXT, -- base64 sig img
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
